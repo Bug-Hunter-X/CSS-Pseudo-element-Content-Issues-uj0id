@@ -1,0 +1,3 @@
+This repository demonstrates a common yet subtle bug in CSS related to the use of the `content` property within `::before` and `::after` pseudo-elements. The bug arises from improper use of the `content` property, leading to either invisible generated content or incorrect content display. The solution showcases how to properly use `content` and address potential issues.
+
+The `bug.css` file contains the problematic CSS, and `bugSolution.css` provides a corrected version.
