@@ -1,0 +1,23 @@
+/* bugSolution.css */
+.container::before {
+  content: "This text is visible!";
+  display: block; /* Ensure the content is visible */
+}
+
+.container::after {
+  content: attr(data-custom-counter); /* Correctly reference counter if used */
+  display: inline;
+}
+
+.counter {
+  counter-reset: custom-counter 0; /* properly initialize counter if used */
+}
+
+.counter::after {
+  content: counter(custom-counter);
+  counter-increment: custom-counter 1; /* increment counter if used */
+}
+
+.container[data-custom-counter] {
+  display: block; /* ensure that the container is displayed if using data attributes */
+} 
